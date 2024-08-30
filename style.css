@@ -103,9 +103,6 @@ section {
    height: 100vh;
    padding: 0 2rem;
    margin: auto;
-}
-
-.hero {
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -161,34 +158,101 @@ section {
 }
 
 .hero-right {
-   width: 50%;
+   width: 500px;
+   height: 300px;
    overflow: hidden;
    position: relative;
+   margin: 0 auto;
+   border-radius: 0.5rem;
+   border: 1px solid var(--line-color);
 }
 
 .carousel {
-   display: flex;
-   width: 300%;
-   height: 20rem;
-   animation: slide 10s infinite;
+   width: 100%;
+   position: relative;
 }
 
-.carousel img {
-   width: 100%;
-   height: auto;
+.carousel-slide {
+   display: flex;
+   justify-content: center;
+   width: 1500px;
+   animation: slide 10s linear infinite;
+}
+
+.carousel-slide img {
+   width: 500px;
+   height: 300px;
+   border: 1px solid var(--line-color);
 }
 
 @keyframes slide {
-   0% {
-       transform: translateX(0%);
-   }
-   33% {
-       transform: translateX(-100%);
-   }
-   66% {
-       transform: translateX(-200%);
-   }
-   100% {
-       transform: translateX(0%);
-   }
+   0% { transform: translateX(0); }
+   33% { transform: translateX(-500px); }
+   66% { transform: translateX(-1000px); }
+   100% { transform: translateX(0); }
+}
+
+.about-left {
+   width: 50%;
+}
+
+.about-left .container {
+   width: 500px;
+   height: 300px;
+}
+
+.about-left .container img {
+   width: 500px;
+   height: 300px;
+   border: 1px solid var(--line-color);
+   border-radius: 0.5rem;
+}
+
+.about-right {
+   width: 50%;
+}
+
+.about-right h1 {
+   font-family: 'Futura Light';
+   font-size: 3.5rem;
+}
+
+.about-right .webtech {
+   font-family: 'Futura Heavy';
+   background: linear-gradient(to right, #1d4ed8, #bfdbfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.about-right p {
+   margin-bottom: 2rem;
+}
+
+.about-right button {
+   width: 9rem;
+   font-size: 1rem;
+   padding: 0.8rem;
+   border-radius: 0.5rem;
+   background-color: var(--primary-color);
+   color: white;
+   border: none;
+   font-family: 'Futura Medium';
+   transition: 200ms ease-in-out;
+}
+
+.about-right button:hover {
+   filter: brightness(1.1);
+}
+
+.about-right button:nth-child(2) {
+   background: none;
+   border: 2px solid var(--text-color);
+   color: var(--text-color);
+   margin-left: 0.8rem;
+}
+
+.about-right button:nth-child(2):hover {
+   background-color: var(--text-color);
+   color: white;
 }
